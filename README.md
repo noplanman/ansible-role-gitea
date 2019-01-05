@@ -1,8 +1,16 @@
-# Ansible Role to install Gitea
+# [Ansible Role to install Gitea][git.feneas.org]
 
 **This role is based on [ansible-role-gogs] by [Jeff Geerling], author of [Ansible for DevOps].**
 
 [![Build Status][travis-build-status]][travis-tests] [![Ansible Role][ansible-role-shield]][ansible-role]
+
+---
+
+:rocket: Development has moved to **[git.feneas.org]**.
+
+(The repository on GitHub is only a mirror, so fork on Feneas to contribute. No registration needed, just sign in with your GitHub account.)
+
+---
 
 Installs [Gitea], a Go-based front-end to Git, on RedHat or Debian-based linux systems.
 
@@ -49,6 +57,8 @@ HTTP port over which Gitea will be accessed.
 
 Docker is used to test the role with different operating systems.
 
+Check the [`tests`] folder.
+
 ## License
 
 MIT
@@ -61,3 +71,5 @@ MIT
 [travis-tests]: https://travis-ci.org/noplanman/ansible-role-gitea "Travis-CI Tests"
 [ansible-role-shield]: https://img.shields.io/ansible/role/20665.svg?style=flat-square "Gitea on Ansible Galaxy"
 [ansible-role]: https://galaxy.ansible.com/noplanman/gitea "Gitea on Ansible Galaxy"
+[git.feneas.org]: https://git.feneas.org/noplanman/ansible-role-gitea "Ansible Role Gitea on Feneas"
+[`tests`]: https://git.feneas.org/noplanman/ansible-role-gitea/tree/master/tests "Tests"
