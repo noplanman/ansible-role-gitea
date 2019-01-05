@@ -1,6 +1,7 @@
 ---
 gitea_user: git
 gitea_user_home: /home/git
-gitea_binary_url: https://github.com/go-gitea/gitea/releases/download/v1.6.3/gitea-1.6.3-linux-amd64
-gitea_binary_checksum: fb46981b16b8dbc01ae0a87c02f4c1ef0ec7037beaa918e5bb4d9a278cf9b9c8
+gitea_version: "1.6.3"
+gitea_download_url: "https://github.com/go-gitea/gitea/releases/download/v{{ gitea_version }}/gitea-{{ gitea_version }}-linux-amd64"
+gitea_checksum: "sha256:fb46981b16b8dbc01ae0a87c02f4c1ef0ec7037beaa918e5bb4d9a278cf9b9c8"
 gitea_http_port: 3000

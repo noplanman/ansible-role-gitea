@@ -29,11 +29,15 @@ See the [`defaults/main.yml`][defaults] file for more details.
 
 The user and home under which Gitea will run and be installed.
 
-    gitea_binary_url: https://github.com/go-gitea/gitea/releases/download/v1.6.3/gitea-1.6.3-linux-amd64
+    gitea_version: "1.6.3"
+
+Gitea binary version to download and install.
+
+    gitea_download_url: "https://github.com/go-gitea/gitea/releases/download/v{{ gitea_version }}/gitea-{{ gitea_version }}-linux-amd64"
 
 Download URL for the Gitea binary.
 
-    gitea_binary_checksum: fb46981b16b8dbc01ae0a87c02f4c1ef0ec7037beaa918e5bb4d9a278cf9b9c8
+    gitea_checksum: "sha256:fb46981b16b8dbc01ae0a87c02f4c1ef0ec7037beaa918e5bb4d9a278cf9b9c8"
 
 SHA256 checksum to verify the downloaded binary.
 

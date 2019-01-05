@@ -16,9 +16,9 @@
 
 - name: Download Gitea.
   get_url:
-    url: "{{ gitea_binary_url }}"
+    url: "{{ gitea_download_url }}"
     dest: "{{ gitea_user_home }}/gitea/gitea"
-    checksum: "{{ gitea_binary_checksum }}"
+    checksum: "{{ gitea_checksum }}"
     owner: "{{ gitea_user }}"
     group: "{{ gitea_user }}"
     mode: "0755"
