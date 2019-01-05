@@ -22,3 +22,6 @@
     owner: root
     group: root
     mode: 0755
+
+- name: Ensure Gitea is running.
+  service: name=gitea state=started enabled=yes

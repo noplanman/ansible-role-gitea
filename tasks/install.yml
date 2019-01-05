@@ -24,6 +24,3 @@
     mode: "0755"
   notify:
     - restart gitea
-
-- name: Ensure Gitea is running.
-  service: name=gitea state=started enabled=yes
