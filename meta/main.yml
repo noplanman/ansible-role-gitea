@@ -3,15 +3,15 @@ dependencies:
   - geerlingguy.git
 
 galaxy_info:
-  author: noplanman
+  role_name: gitea
   description: "Gitea (Git with a cup of tea)"
-  license: "license (BSD, MIT)"
-  min_ansible_version: 2.0
+  author: Armando Lüscher
+  license: MIT
+  min_ansible_version: 2.0.0.0
   platforms:
   - name: EL
     versions:
-    - 6
-    - 7
+    - all
   - name: Ubuntu
     versions:
     - all

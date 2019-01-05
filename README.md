@@ -1,8 +1,8 @@
-# Ansible Role: Gitea
+# Ansible Role to install Gitea
 
 **This role is based on [ansible-role-gogs] by [Jeff Geerling], author of [Ansible for DevOps].**
 
-[![Build Status](https://travis-ci.org/noplanman/ansible-gitea.svg?branch=master)](https://travis-ci.org/noplanman/ansible-gitea)
+[![Build Status][travis-build-status]][travis-tests] [![Ansible Role][ansible-role-shield]][ansible-role]
 
 Installs [Gitea], a Go-based front-end to Git, on RedHat or Debian-based linux systems.
 
@@ -39,21 +39,25 @@ HTTP port over which Gitea will be accessed.
 
 ## Example Playbook
 
-    - hosts: servers
-      vars_files:
-        - vars/main.yml
+    - hosts: server
+      vars:
+        gitea_http_port: 8080
       roles:
         - noplanman.gitea
 
-*Inside `vars/main.yml`*:
+## Tests
 
-    gitea_http_port: "8080"
+Docker is used to test the role with different operating systems.
 
 ## License
 
-MIT / BSD
+MIT
 
-[Gitea]: https://github.com/go-gitea/gitea/
-[ansible-role-gogs]: https://github.com/geerlingguy/ansible-role-gogs
+[Gitea]: https://github.com/go-gitea/gitea/ "Gitea on GitHub"
+[ansible-role-gogs]: https://github.com/geerlingguy/ansible-role-gogs "Ansible Role Gogs on GitHub"
 [Jeff Geerling]: https://www.jeffgeerling.com/
 [Ansible for DevOps]: https://www.ansiblefordevops.com/
+[travis-build-status]: https://img.shields.io/travis/noplanman/ansible-role-gitea.svg?style=flat-square "Travis-CI Build Status"
+[travis-tests]: https://travis-ci.org/noplanman/ansible-role-gitea "Travis-CI Tests"
+[ansible-role-shield]: https://img.shields.io/ansible/role/20665.svg?style=flat-square "Gitea on Ansible Galaxy"
+[ansible-role]: https://galaxy.ansible.com/noplanman/gitea "Gitea on Ansible Galaxy"
