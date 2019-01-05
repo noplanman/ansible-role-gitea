@@ -1,10 +1,6 @@
 ---
 gitea_user: git
 gitea_user_home: /home/git
-gitea_binary_url: "https://github.com/go-gitea/gitea/releases/download/v1.1.4/gitea-1.1.4-linux-amd64"
-gitea_binary_sig_url: "{{ gitea_binary_url }}.sha256"
-gitea_http_port: "3000"
-gitea_use_mysql: false
-gitea_db_name: gitea
-gitea_db_username: gitea
-gitea_db_password: root
+gitea_binary_url: https://github.com/go-gitea/gitea/releases/download/v1.6.3/gitea-1.6.3-linux-amd64
+gitea_binary_checksum: fb46981b16b8dbc01ae0a87c02f4c1ef0ec7037beaa918e5bb4d9a278cf9b9c8
+gitea_http_port: 3000

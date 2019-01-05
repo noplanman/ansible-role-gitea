@@ -1,0 +1,29 @@
+---
+- name: Create user for Gitea.
+  user:
+    comment: Gitea
+    name: "{{ gitea_user }}"
+    home: "{{ gitea_user_home }}"
+
+- name: Create Gitea root and log folder.
+  file:
+    path: "{{ gitea_user_home }}/gitea/log"
+    state: directory
+    owner: "{{ gitea_user }}"
+    group: "{{ gitea_user }}"
+    mode: 0755
+    recurse: yes
+
+- name: Download Gitea.
+  get_url:
+    url: "{{ gitea_binary_url }}"
+    dest: "{{ gitea_user_home }}/gitea/gitea"
+    checksum: "{{ gitea_binary_checksum }}"
+    owner: "{{ gitea_user }}"
+    group: "{{ gitea_user }}"
+    mode: "0755"
+  notify:
+    - restart gitea
+
+- name: Ensure Gitea is running.
+  service: name=gitea state=started enabled=yes
